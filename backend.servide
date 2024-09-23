@@ -1,0 +1,11 @@
+[unit]
+description = Backend Service
+
+[Service]
+user=expense
+Environment=DB_HOST="mysql.daws81s.online"
+ExecStart=/bin/node /app/index.js
+SyslogIdentifier=Backend
+
+[Install]
+Wanted=multi-user.target
